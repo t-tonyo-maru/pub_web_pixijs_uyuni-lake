@@ -63,7 +63,9 @@ window.onload = async () => {
   const reflectionFilter = new ReflectionFilter(ReflectionParameter)
   container.filters = [reflectionFilter]
 
-  const spineAnimation = await PIXI.Assets.load(`${assetsUrl}/spine-data/model.json`)
+  const spineAnimation = await PIXI.Assets.load(
+    `${assetsUrl}/spine-data/model.json`
+  )
     .then((resource) => {
       const animation = new Spine(resource.spineData)
 

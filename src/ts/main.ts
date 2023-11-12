@@ -52,7 +52,7 @@ window.onload = async () => {
   container.addChild(backgroundImage as PIXI.DisplayObject)
 
   // filter
-  const ReflectionParameter = {
+  const reflectionParameter = {
     mirror: true,
     boundary: 0.8,
     amplitude: [0, 20],
@@ -60,7 +60,7 @@ window.onload = async () => {
     alpha: [1, 1]
     // time: 1
   }
-  const reflectionFilter = new ReflectionFilter(ReflectionParameter)
+  const reflectionFilter = new ReflectionFilter(reflectionParameter)
   container.filters = [reflectionFilter]
 
   const spineAnimation = await PIXI.Assets.load(
@@ -88,8 +88,8 @@ window.onload = async () => {
   const gui = new GUI()
   const guiObject = {
     enable: true,
-    mirror: ReflectionParameter.mirror,
-    boundary: ReflectionParameter.boundary,
+    mirror: reflectionParameter.mirror,
+    boundary: reflectionParameter.boundary,
     ['amplitude.start']: 0,
     ['amplitude.end']: 20,
     ['waveLength.start']: 30,

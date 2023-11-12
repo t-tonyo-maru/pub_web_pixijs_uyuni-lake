@@ -7,7 +7,7 @@ import GUI from 'lil-gui'
 
 const assetsUrl =
   process.env.NODE_ENV === 'production'
-    ? '/pub_web_pixijs_night-fire-fly/assets'
+    ? '/pub_web_pixijs_uyuni-lake/assets'
     : '/assets'
 
 // Links
@@ -63,7 +63,9 @@ window.onload = async () => {
   const reflectionFilter = new ReflectionFilter(ReflectionParameter)
   container.filters = [reflectionFilter]
 
-  const spineAnimation = await PIXI.Assets.load(`${assetsUrl}/spine-data/model.json`)
+  const spineAnimation = await PIXI.Assets.load(
+    `${assetsUrl}/spine-data/model.json`
+  )
     .then((resource) => {
       const animation = new Spine(resource.spineData)
 

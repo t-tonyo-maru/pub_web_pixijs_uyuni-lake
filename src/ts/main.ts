@@ -192,6 +192,11 @@ window.onload = async () => {
       )
       backgroundRect.width = width
       backgroundRect.height = height
+
+      if (spineAnimation) {
+        spineAnimation.x = app.screen.width / 2
+        spineAnimation.y = app.screen.height
+      }
     }, 500)
   })
 }

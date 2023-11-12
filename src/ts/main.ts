@@ -7,7 +7,7 @@ import GUI from 'lil-gui'
 
 const assetsUrl =
   process.env.NODE_ENV === 'production'
-    ? '/pub_web_pixijs_night-fire-fly/assets'
+    ? '/pub_web_pixijs_uyuni-lake/assets'
     : '/assets'
 
 // Links
